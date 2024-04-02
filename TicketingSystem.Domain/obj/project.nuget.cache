@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "skk+cSWyFQrTV1agboWy97s4VikBFy+67imu0QWlmo1fG5MuDhHknxjfkB35jBOTEDcb+hbyzkSsb+KtqJOzEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\RICHE\\Desktop\\Ticketing System\\Ticketing System\\Ticketing System\\TicketingSystem.Domain\\TicketingSystem.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "sRAne5WVcESEGtfiivd6zmmHe7VXChatvet6kN6HnTU4rhkkbXIlb+N2xNgFy5F3smAbOFGqM6JcPUfOiIKTgw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\RICHE\\Desktop\\Ticketing System\\Ticketing System\\Ticketing System\\TicketingSystem.Application\\TicketingSystem.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\RICHE\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
