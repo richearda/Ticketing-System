@@ -14,13 +14,18 @@ namespace TicketingSystem.Persistence
         {
         }
 
-        public DbSet<Ticket> Tickets { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            // base.OnModelCreating(modelBuilder);
         }
-        
+
+        public DbSet<Attachment> Attachments { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<CostCenter> CostCenters { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<SystemInfo> SystemInfos { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+
     }
 }
