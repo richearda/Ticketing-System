@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicketingSystem.Domain
 {
-    public class Attachement
+    public class Attachment
     {
         public int AttachementID { get; set; }
         public string FileName { get; set; }

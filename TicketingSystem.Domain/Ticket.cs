@@ -23,7 +23,7 @@ namespace TicketingSystem.Domain
         public string Remarks { get; set; }
         public string ProblemAnalysis { get; set; }
 
-        public ICollection<Attachement> Attachements { get; set; }
+        public ICollection<Attachment> Attachements { get; set; }
 
 
 
