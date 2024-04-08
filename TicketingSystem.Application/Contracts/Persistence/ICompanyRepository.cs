@@ -9,10 +9,7 @@ namespace TicketingSystem.Application.Contracts.Persistence
 {
     public interface ICompanyRepository : IGenericRepository<Company>
     {
-        Task<Company> GetCompany(int id);
-        Task<List<Company>> GetCompanies();
-        Task AddCompany(Company company);
-        Task DeleteCompany(int id);
-        Task UpdateCompany(Company company);       
+        Task<List<Company>> GetCompanyWithCostCenters(int id);
+            
     }
 }

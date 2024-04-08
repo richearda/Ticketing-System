@@ -9,10 +9,7 @@ namespace TicketingSystem.Application.Contracts.Persistence
 {
     public interface ICostCenterRepository : IGenericRepository<CostCenter>
     {
-        Task<CostCenter> GetCostCenter(int id);
-        Task<List<CostCenter>> GetCostCenters();
-        Task AddCostCenter(CostCenter costcenter);
-        Task DeleteCostCenter(int id);
-        Task UpdateCostCenter(CostCenter costcenter);
+        Task<List<CostCenter>> GetCostCenterSystemInfos(int id);
+       
     }
 }
