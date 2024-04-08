@@ -16,29 +16,10 @@ namespace TicketingSystem.Persistence.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task AddSystemInfo(SystemInfo systeminfo)
-        {
-            await _dbContext.SystemInfos.AddAsync(systeminfo);
-        }
 
-        public Task DeleteSystemInfo(int id)
+        public async Task<List<SystemInfo>> GetSystemInfoCostCenters(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public async Task<SystemInfo> GetSystemInfo(int id)
-        {
-            return await _dbContext.SystemInfos.FindAsync(id);
-        }
-
-        public async Task<List<SystemInfo>> GetSystemInfos()
-        {
-            return await _dbContext.SystemInfos.ToListAsync();
-        }
-
-        public async Task UpdateSystemInfo(SystemInfo systeminfo)
-        {
-            _dbContext.Entry(systeminfo).State = EntityState.Modified;
+            return await _dbContext.SystemInfos.Include(s => s.CostCenters).Where(s => s.SystemInfoID == id).ToListAsync();
         }
     }
 }

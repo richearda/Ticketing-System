@@ -16,31 +16,10 @@ namespace TicketingSystem.Persistence.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task AddCompany(Company company)
-        {
-            await _dbContext.AddAsync(company);
-        }
 
-        public async Task DeleteCompany(int id)
+        public async Task<List<Company>> GetCompanyWithCostCenters(int id)
         {
-           
-          
-        }
-
-        public async Task<List<Company>> GetCompanies()
-        {
-            return await _dbContext.Companies.ToListAsync();
-        }
-
-        public async Task<Company> GetCompany(int id)
-        {
-            return await _dbContext.Companies.FindAsync(id);
-        }
-
-        public async Task UpdateCompany(Company company)
-        {
-          
-            _dbContext.Entry(company).State = EntityState.Modified;
+           return await _dbContext.Companies.Include(c => c.CostCenters).Where(c => c.CompanyID == id).ToListAsync();
         }
     }
 }

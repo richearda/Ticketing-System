@@ -17,29 +17,25 @@ namespace TicketingSystem.Persistence.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task AddTicket(Ticket ticket)
-        {
-            await _dbContext.AddAsync(ticket);
-        }
-
-        public async Task DeleteTicket(int id)
-        {
-            //await _dbContext.Set<T>().RemoveAsync(id);
-        }
-
-        public async Task<Ticket> GetTicket(int id)
-        {
-           return await _dbContext.Tickets.FindAsync(id);
-        }
-
-        public async Task<List<Ticket>> GetTickets()
-        {
-            return await _dbContext.Tickets.ToListAsync();
-        }
 
         public async Task<List<Ticket>> GetTicketsAssignedBy(int userId)
         {
             return await _dbContext.Tickets.Where(t => t.AssignedBy == userId).ToListAsync();
+        }
+
+        public async Task<List<Ticket>> GetTicketsAssignedTo(int userId)
+        {
+            return await _dbContext.Tickets.Where(t => t.AssignedTo == userId).ToListAsync();
+        }
+
+        public async Task<List<Ticket>> GetTicketsByDueDate(DateOnly dueDate)
+        {
+            return await _dbContext.Tickets.Where(t => t.DueDate == dueDate).ToListAsync();
+        }
+
+        public async Task<List<Ticket>> GetTicketsByRequestedDate(DateOnly requestedDate)
+        {
+           return await _dbContext.Tickets.Where(t => t.RequestedDate == requestedDate).ToListAsync();
         }
 
         public async Task<List<Ticket>> GetTicketsRequestedBy(int userId)
@@ -47,9 +43,9 @@ namespace TicketingSystem.Persistence.Repositories
             return await _dbContext.Tickets.Where(t => t.RequestedBy == userId).ToListAsync();
         }
 
-        public async Task UpdateTicket(Ticket ticket)
+        public async Task<Ticket> GetTicketWithAttachmentDetails(int ticketId)
         {
-              _dbContext.Entry(ticket).State = EntityState.Modified;
+            return await _dbContext.Tickets.Include(t => t.Attachments).Where(t => t.TicketID == ticketId).FirstOrDefaultAsync();
         }
     }
 }

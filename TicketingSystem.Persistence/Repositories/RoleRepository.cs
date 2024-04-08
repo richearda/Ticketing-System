@@ -16,29 +16,6 @@ namespace TicketingSystem.Persistence.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task AddRole(Role role)
-        {
-            await _dbContext.Roles.AddAsync(role);
-        }
-
-        public Task DeleteRole(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Role> GetRole(int id)
-        {
-            return await _dbContext.Roles.FindAsync(id);
-        }
-
-        public async Task<List<Role>> GetRoles()
-        {
-            return await _dbContext.Roles.ToListAsync();
-        }
-
-        public async Task UpdateRole(Role role)
-        {
-            _dbContext.Entry(role).State = EntityState.Modified;
-        }
+        
     }
 }
