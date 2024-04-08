@@ -19,7 +19,7 @@ namespace TicketingSystem.Domain
         public int AssignedTo { get; set; }
         public DateOnly DueDate { get; set; }
         public DateTime DateTimeStarted { get; set; }
-        public DateTime DateTimeCompleted { get; set; } = DateTime.Now;
+        public DateTime DateTimeCompleted { get; set; }
         public string Remarks { get; set; }
         public string ProblemAnalysis { get; set; }
 
