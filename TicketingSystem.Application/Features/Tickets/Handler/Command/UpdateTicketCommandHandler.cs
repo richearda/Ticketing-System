@@ -23,8 +23,8 @@ namespace TicketingSystem.Application.Features.Tickets.Handler.Command
         }
         public async Task<int> Handle(UpdateTicketCommand request, CancellationToken cancellationToken)
         {
-            var ticket = _ticketRepository.Exists(request.Ticket.TicketID);
-            if (ticket == null)
+            var ticket = await _ticketRepository.Exists(request.Ticket.TicketID);
+            if (ticket)
             {
                 var t = _mapper.Map<Ticket>(ticket);
                 await _ticketRepository.Update(t);
