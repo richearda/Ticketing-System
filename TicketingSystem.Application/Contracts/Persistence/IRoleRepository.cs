@@ -7,6 +7,9 @@ using TicketingSystem.Domain;
 
 namespace TicketingSystem.Application.Contracts.Persistence
 {
+    /// <summary>
+    /// Interface repository for Role
+    /// </summary>
     public interface IRoleRepository : IGenericRepository<Role>
     {
        
