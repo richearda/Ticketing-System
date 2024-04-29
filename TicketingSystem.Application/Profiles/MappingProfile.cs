@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TicketingSystem.Application.DTOs;
+using TicketingSystem.Application.DTOs.Ticket;
 using TicketingSystem.Domain;
 
 namespace TicketingSystem.Application.Profiles
@@ -19,6 +20,7 @@ namespace TicketingSystem.Application.Profiles
             CreateMap<Role, RoleDto>().ReverseMap();
             CreateMap<SystemInfo, SystemInfoDto>().ReverseMap();
             CreateMap<Ticket, TicketDto>().ReverseMap();
+            CreateMap<Ticket, CreateTicketDto>().ReverseMap();
         }
         
     }
