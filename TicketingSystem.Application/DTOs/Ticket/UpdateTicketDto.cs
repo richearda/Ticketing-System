@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace TicketingSystem.Application.DTOs.Ticket
 {
-    public class GetTicketsByAssignee
+    public class UpdateTicketDto
     {
         public int TicketID { get; set; }
         public string TicketNo { get; set; }
@@ -23,6 +22,9 @@ namespace TicketingSystem.Application.DTOs.Ticket
         public DateTime DateTimeCompleted { get; set; } = DateTime.Now;
         public string Remarks { get; set; }
         public string ProblemAnalysis { get; set; }
-        public ICollection<AttachmentDto> Attachments { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string UploadedBy { get; set; }
+        public DateOnly UploadedDate { get; set; }
     }
 }
