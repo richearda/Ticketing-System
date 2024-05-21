@@ -8,7 +8,7 @@ using TicketingSystem.Application.DTOs.Ticket;
 
 namespace TicketingSystem.Application.Features.Tickets.Request.Queries
 {
-    public class GetTicketsAssignedByRequest : IRequest<List<GetTicketsByAssignor>>
+    public class GetTicketsAssignedByRequest : IRequest<List<GetTicketsByAssignorDto>>
     {
         public int Id { get; set; }
     }

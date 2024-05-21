@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TicketingSystem.Application.DTOs.CostCenter;
+using TicketingSystem.Application.DTOs;
 
 namespace TicketingSystem.Application.Features.CostCenter.Request.Queries
 {
