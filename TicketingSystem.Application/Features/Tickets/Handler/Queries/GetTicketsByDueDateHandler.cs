@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TicketingSystem.Application.Contracts.Persistence;
+using TicketingSystem.Application.DTOs;
 using TicketingSystem.Application.DTOs.Ticket;
 using TicketingSystem.Application.Features.Tickets.Request.Queries;
 

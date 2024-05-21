@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TicketingSystem.Application.Contracts.Persistence;
+using TicketingSystem.Application.DTOs;
 using TicketingSystem.Application.DTOs.Ticket;
 using TicketingSystem.Application.Features.Tickets.Request.Queries;
 
 namespace TicketingSystem.Application.Features.Tickets.Handler.Queries
 {
-    public class GetTicketsAssignedByHandler : IRequestHandler<GetTicketsAssignedByRequest, List<TicketDto>>
+    public class GetTicketsAssignedByHandler : IRequestHandler<GetTicketsAssignedByRequest, List<GetTicketsByAssignorDto>>
     {
         private readonly ITicketRepository _ticketRepository;
         private readonly IMapper _mapper;
@@ -20,10 +21,10 @@ namespace TicketingSystem.Application.Features.Tickets.Handler.Queries
             _ticketRepository = ticketRepository;
             _mapper = mapper;
         }
-        public async Task<List<TicketDto>> Handle(GetTicketsAssignedByRequest request, CancellationToken cancellationToken)
+        public async Task<List<GetTicketsByAssignorDto>> Handle(GetTicketsAssignedByRequest request, CancellationToken cancellationToken)
         {
             var tickets = await _ticketRepository.GetTicketsAssignedBy(request.Id);
-            return _mapper.Map<List<TicketDto>>(tickets);
+            return _mapper.Map<List<GetTicketsByAssignorDto>>(tickets);
         }
     }
 }
