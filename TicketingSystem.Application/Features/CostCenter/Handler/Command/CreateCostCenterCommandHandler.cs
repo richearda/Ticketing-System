@@ -24,9 +24,9 @@ namespace TicketingSystem.Application.Features.CostCenter.Handler.Command
         }
         public async Task<CostCenterDto> Handle(CreateCostCenterCommand request, CancellationToken cancellationToken)
         {
-            var costCenter = _mapper.Map<CostCenter>(request.CostCenter);
+            var costCenter = _mapper.Map<TicketingSystem.Domain.CostCenter>(request.CostCenter);
             await _costCenterRepository.Add(costCenter);
-            return costCenter;
+            return request.CostCenter;
         }
     }
 }
