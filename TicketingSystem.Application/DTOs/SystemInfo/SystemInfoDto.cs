@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TicketingSystem.Application.DTOs.CostCenter;
 using TicketingSystem.Domain;
 
 namespace TicketingSystem.Application.DTOs
