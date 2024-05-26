@@ -22,7 +22,7 @@ namespace TicketingSystem.Application.Features.CostCenter.Handler.Command
         }
         public async Task<Unit> Handle(UpdateCostCenterCommand request, CancellationToken cancellationToken)
         {
-            var costCenter = _mapper.Map<CostCenter>(request.CostCenter);
+            var costCenter = _mapper.Map<TicketingSystem.Domain.CostCenter>(request.CostCenter);
             await _costCenterRepository.Update(costCenter);
             return Unit.Value;
         }
